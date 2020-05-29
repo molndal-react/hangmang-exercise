@@ -50,7 +50,7 @@ class Hangman extends Component {
     return (
       <div className="hangman">
         <h1>Hangman</h1>
-        <p>Syftet med spelet är att fds ......</p>
+        <p>Syftet med spelet är att ......</p>
         <img src={img} alt={"alt"}></img>
         <p className="hangman-word">{this.guessWord()}</p>
         <p>Antal gissningar: 0</p>
