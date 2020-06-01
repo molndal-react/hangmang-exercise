@@ -56,10 +56,7 @@ class Hangman extends Component {
         <p>Antal gissningar: 0</p>
         <div className="hangman-btns">{this.generateButtons()}</div>
         <button onClick={this.handleReset} className="resetBtn">
-          Reset/Återställ
-        </button>
-        <button onClick={this.handleReset} className="resetBtn">
-          Börja om
+          Återställ
         </button>
       </div>
     );
