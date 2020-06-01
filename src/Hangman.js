@@ -61,6 +61,9 @@ class Hangman extends Component {
         <button onClick={this.handleReset} className="resetBtn">
           Börja om
         </button>
+        <button onClick={this.handleReset} className="resetBtn">
+          Börja test
+        </button>
       </div>
     );
   }
