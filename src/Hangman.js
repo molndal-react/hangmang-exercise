@@ -13,7 +13,7 @@ class Hangman extends Component {
     };
 
     this.handleOnClick = this.handleOnClick.bind(this);
-    this.handleReset = this.handleReset.bind(this);
+    this.onReset = this.onReset.bind(this);
   }
 
   guessWord() {
@@ -21,7 +21,7 @@ class Hangman extends Component {
     return splittedWord.map((ltr) => "_");
   }
 
-  generateButtons() {
+  generateAlphabet() {
     let arrLetter = "abcdefghijklmnopqrstuvwxyzåäö".split("");
     return arrLetter.map((ltr) => (
       <ButtonComponent
@@ -40,7 +40,7 @@ class Hangman extends Component {
     }));
   }
 
-  handleReset() {
+  onReset() {
     this.setState((st) => ({
       isDisabled: new Set(),
     }));
@@ -54,9 +54,9 @@ class Hangman extends Component {
         <img src={img} alt={"alt"}></img>
         <p className="hangman-word">{this.guessWord()}</p>
         <p>Antal gissningar: 0</p>
-        <div className="hangman-btns">{this.generateButtons()}</div>
-        <button onClick={this.handleReset} className="resetBtn">
-          Återställ
+        <div className="hangman-btns">{this.generateAlphabet()}</div>
+        <button onClick={this.onReset} className="resetBtn">
+          Starta om
         </button>
       </div>
     );
